@@ -3,7 +3,8 @@ name = "lor-os"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+#[build]
+#target = "x86_64-lor_os.json"
 
 [dependencies]
 
@@ -13,5 +14,6 @@ panic = "abort"
 [profile.release]
 panic = "abort"
 
-[unstable]
-build-std = ["core", "compiler_builtins"]
+#[unstable]
+#build-std-features = ["compiler-builtins-mem"]
+#build-std = ["core", "compiler_builtins"]
